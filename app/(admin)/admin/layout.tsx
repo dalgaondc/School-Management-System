@@ -3,7 +3,11 @@ import { requireRole } from "@/lib/auth";
 import { signOut } from "@/app/actions/auth";
 
 // Add new admin sections here as you build them.
-const nav = [{ href: "/admin", label: "Dashboard" }];
+const nav = [
+  { href: "/admin", label: "Dashboard" },
+  { href: "/admin/classes", label: "Classes" },
+  { href: "/admin/subjects", label: "Subjects" },
+];
 
 export default async function AdminLayout({
   children,
