@@ -6,8 +6,11 @@ import { signOut } from "@/app/actions/auth";
 const nav = [
   { href: "/admin", label: "Dashboard" },
   { href: "/admin/teachers", label: "Teachers" },
+  { href: "/admin/students", label: "Students" },
   { href: "/admin/classes", label: "Classes" },
   { href: "/admin/subjects", label: "Subjects" },
+  { href: "/admin/assignments", label: "Assignments" },
+  { href: "/admin/reports", label: "Reports" },
 ];
 
 export default async function AdminLayout({
@@ -37,11 +40,16 @@ export default async function AdminLayout({
       <div className="flex-1">
         <header className="flex items-center justify-between border-b border-gray-200 px-6 py-3">
           <span className="text-sm text-gray-600">{profile.full_name}</span>
-          <form action={signOut}>
-            <button className="rounded-md border border-gray-300 px-3 py-1.5 text-sm hover:bg-gray-100">
-              Sign out
-            </button>
-          </form>
+          <div className="flex items-center gap-4">
+            <Link href="/reset-password" className="text-sm text-gray-600 underline">
+              Change password
+            </Link>
+            <form action={signOut}>
+              <button className="rounded-md border border-gray-300 px-3 py-1.5 text-sm hover:bg-gray-100">
+                Sign out
+              </button>
+            </form>
+          </div>
         </header>
         <main className="p-6">{children}</main>
       </div>

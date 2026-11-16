@@ -17,6 +17,9 @@ export default async function TeacherLayout({
         </Link>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-600">{profile.full_name}</span>
+          <Link href="/reset-password" className="text-sm text-gray-600 underline">
+            Change password
+          </Link>
           <form action={signOut}>
             <button className="rounded-md border border-gray-300 px-3 py-1.5 text-sm hover:bg-gray-100">
               Sign out
