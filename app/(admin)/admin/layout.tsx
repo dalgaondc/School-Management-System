@@ -5,6 +5,7 @@ import { signOut } from "@/app/actions/auth";
 // Add new admin sections here as you build them.
 const nav = [
   { href: "/admin", label: "Dashboard" },
+  { href: "/admin/teachers", label: "Teachers" },
   { href: "/admin/classes", label: "Classes" },
   { href: "/admin/subjects", label: "Subjects" },
 ];
